@@ -12,3 +12,6 @@ pycodestyle
 pytest
 Werkzeug==2.3.6
 googlemaps
+requests
+json
+os
