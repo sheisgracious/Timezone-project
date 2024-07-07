@@ -15,5 +15,9 @@ jobs:
       - name: Install tools
         run: python -m pip install --upgrade pip pycodestyle
 
+      - name: Fetch API Key
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+
       - name: Check Style
         run: pycodestyle --first *.py
