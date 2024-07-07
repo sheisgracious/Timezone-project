@@ -43,7 +43,7 @@ def index():
     if request.method == 'POST':
         location = request.form['location']
         timezone = find_timezone(location)
-    if location is not None:
+    if location != None:
         location = location.title()
     return render_template('index.html', timezone=timezone, location=location)
 
