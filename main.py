@@ -7,7 +7,7 @@ from flask import Flask, render_template, request
 # load_dotenv()
 # API_KEY = os.environ.get('API_KEY')
 
-API_KEY = os.getenv('API_KEY')
+API_KEY = os.environ['API_KEY']
 app = Flask(__name__)
 
 
