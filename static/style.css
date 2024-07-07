@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dbfaed;
+}
+
+.logo {
+
+    display: block; 
+    margin: auto; 
+}
+
+.h1 {
+    color: #a60000;
+    font-family: 'Baskervville SC', serif;
+    text-align: center;
+    font-size: 60pt;
+    padding-top: 50px;
+    
+}
+
+.h2 {
+    color: #8c0000;
+    font-family: Georgia, Times, 'Times New Roman', serif, serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 35px;
+
+
+}
+
+form {
+    padding-left: 420pt;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #760000;
+    border-radius: 4px;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff8282;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 10pt;
+}
+
+.result {
+    font-family: 'Courier New', Courier, monospace, serif;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TimeZoner</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1 class="h1">TimeZoner</h1>
+    <img src="{{ url_for('static', filename='world_logo.png') }}" alt="Logo" class="logo">
+    <h2 class="h2">Find the timezone of a location.</h2>
+    
+    <form method="POST" action="/">
+        <input type="text" name="location" placeholder="Enter city name">
+        <button type="submit">Find Timezone</button>
+    </form>
+
+    {% if location %}
+        <p class="result">The timezone for {{ location }} is {{ timezone }}.</p>
+    {% endif %}
+</body>
+
+
+</html>
+
