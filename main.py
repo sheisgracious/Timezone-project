@@ -2,14 +2,17 @@ import requests
 import os
 import time
 from flask import Flask, render_template, request
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 # load_dotenv()
 # API_KEY = os.environ.get('API_KEY')
 
-API_KEY = os.getenv('API_KEY')
-app = Flask(__name__)
+load_dotenv('.env')
 
+# Access API_KEY
+API_KEY = os.getenv('API_KEY')
+
+app = Flask(__name__)
 
 def find_timezone(location):
     if not API_KEY:
