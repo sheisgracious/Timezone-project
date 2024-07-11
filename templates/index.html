@@ -16,11 +16,12 @@
     <h1 class="h1">TimeZoner</h1>
     <img src="{{ url_for('static', filename='world_logo.png') }}" alt="Logo" class="logo">
     <h2 class="h2">Find the timezone of a location.</h2>
-    
+<div class="form">
     <form method="POST" action="/">
         <input type="text" name="location" placeholder="Enter city name">
         <button type="submit">Find Timezone</button>
     </form>
+</div>
 
     {% if location %}
         <p class="result">The timezone for {{ location }} is {{ timezone }}.</p>
