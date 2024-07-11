@@ -1,10 +1,4 @@
 body {
-    display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    height: 100vh; /* Ensure full height of viewport */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
     background-color: #dbfaed;
     font-family: Arial, sans-serif;
 }
@@ -35,9 +29,7 @@ body {
 }
 
 form {
-    max-width: 600px; /* Adjust width of form as needed */
-    width: 100%; /* Ensure form takes full available width */
-    padding: 20px; /* Add padding inside form */
+    margin: 0 auto; 
 }
 
 input[type="text"] {
