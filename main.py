@@ -36,6 +36,7 @@ def find_timezone(location):
         if time_response.status_code == 200:
             timezone = time_response.json()["timeZoneName"]
             return timezone
+        return "Invalid input"
     return "Invalid input"
 
 @app.route('/', methods=['GET', 'POST'])
