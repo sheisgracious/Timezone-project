@@ -14,18 +14,22 @@ app = Flask(__name__)
 def find_timezone(location):
     if not API_KEY:
         return "not found (404 error)"
-    else:
-        return API_KEY
+
+
 
     #get latitude and longitude of user's input
     geocode_url = f"https://maps.googleapis.com/maps/api/geocode/"\
-                f"json?address={location}&key={API_KEY}'"
+                f"json?address={location}&key={API_KEY}"
     response = requests.get(geocode_url)
+    
+    if 'error_message' in response.json():
+        str_message = "unfound. " + response.json()['error_message'][0:-2] #slicing to prevent redundant period and space
+        return str_message
+    
 
     if response.status_code == 200:
         lat = response.json()['results'][0]['geometry']['location']['lat']
         lng = response.json()['results'][0]['geometry']['location']['lng']
-
         #get timezone of location
         timestamp = int(time.time())  #get the current timestamp required for URL:
         timezone_url = 'https://maps.googleapis.com/maps/'\
